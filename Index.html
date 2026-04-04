@@ -747,7 +747,36 @@
     }
 
     @media (max-width: 860px) {
-      .topbar { position: static; }
+      .topbar {
+        position: static;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 16px;
+      }
+      .brand {
+        align-items: flex-start;
+      }
+      .hero-main { min-height: auto; padding: 24px; }
+      .control-card, .signal-card, .role-card, .project-card, .contact-card, .contact-panel { padding: 20px; }
+      .hero-copy { grid-template-columns: 1fr; }
+      .kpi-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .skills-featured { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .skills-secondary { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .control-grid { grid-template-columns: 1fr 1fr; }
+      .section-heading { flex-direction: column; align-items: flex-start; }
+      .section-heading p { text-align: left; }
+      .nav {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+      }
+      .nav a {
+        width: 100%;
+        text-align: center;
+        padding: 12px 10px;
+      }
+    }
       .hero-main { min-height: auto; padding: 24px; }
       .control-card, .signal-card, .role-card, .project-card, .contact-card, .contact-panel { padding: 20px; }
       .hero-copy { grid-template-columns: 1fr; }
@@ -761,6 +790,27 @@
 
     @media (max-width: 560px) {
       .container { width: min(var(--maxw), calc(100% - 20px)); }
+      .hero-title { font-size: 2.5rem; }
+      .kpi-grid,
+      .skills-featured,
+      .skills-secondary,
+      .projects-grid,
+      .control-grid { grid-template-columns: 1fr; }
+      .topbar { padding: 14px; }
+      .brand-mark { width: 44px; height: 44px; }
+      .brand h1 {
+        white-space: normal;
+        overflow: visible;
+        text-overflow: unset;
+        line-height: 1.35;
+      }
+      .nav {
+        grid-template-columns: 1fr;
+      }
+      .nav a {
+        border-radius: 16px;
+      }
+    }
       .nav { justify-content: flex-start; }
       .hero-title { font-size: 2.5rem; }
       .kpi-grid,
@@ -1200,7 +1250,7 @@
           </article>
         </div>
 
-        <div class="footer-note reveal">Designed as a futuristic analytics control center — premium dark UI, refined motion, and recruiter-first scanability.</div>
+        
       </section>
     </div>
   </div>
